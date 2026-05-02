@@ -1,8 +1,6 @@
 import puppeteer from 'puppeteer';
 
 const BASE_URL = 'https://rceapi.estado.pr.gov';
-const SEARCH_ENDPOINT = `${BASE_URL}/api/corporation/search`;
-const INFO_ENDPOINT = `${BASE_URL}/api/corporation/info`;
 
 /**
  * Search corporations by name or registration number.
@@ -22,7 +20,7 @@ export async function searchCorporations(query) {
       '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     );
 
-    // Navigate to the search page first to handle Cloudflare
+    // Navigate to the API base first to handle Cloudflare
     await page.goto(`${BASE_URL}/api/`, {
       waitUntil: 'networkidle0',
       timeout: 30000,
