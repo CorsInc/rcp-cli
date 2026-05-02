@@ -1,0 +1,20 @@
+{
+  "name": "rcp-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to search and retrieve corporate entity information from the Puerto Rico Department of State's Registry of Corporations (RCP)",
+  "main": "src/index.js",
+  "bin": {
+    "rcp": "./src/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "rcp": "node src/index.js"
+  },
+  "keywords": ["rcp", "puerto-rico", "corporations", "registry", "cli"],
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.0.0",
+    "yargs": "^17.7.2"
+  }
+}
